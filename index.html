@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#11132f" />
+    <meta
+      name="description"
+      content="Seishun Projects - ruang untuk ide, karya, dan kolaborasi."
+    />
+    <link rel="icon" type="image/png" href="icon.png" />
+    <title>Seishun Projects | Link Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
+      <div class="grain"></div>
+
+      <div class="container position-relative content-wrap">
+        <nav class="topbar" aria-label="Navigasi utama">
+          <div class="brand-mark" aria-label="Seishun Projects beranda">
+            <span class="brand-dot"></span>
+            <span>seishun x mang.kupi</span>
+          </div>
+          <button
+            class="icon-button"
+            id="shareButton"
+            type="button"
+            aria-label="Bagikan halaman"
+            data-bs-toggle="tooltip"
+            data-bs-placement="left"
+            title="Bagikan halaman"
+          >
+            <i class="bi bi-share"></i>
+          </button>
+        </nav>
+
+        <section class="profile text-center" aria-labelledby="profile-name">
+          <div class="avatar-frame">
+            <img src="icon.png" alt="Logo Seishun Projects" class="avatar" />
+          </div>
+          <p class="eyebrow">EVENT ORGANIZER · 2026</p>
+          <h1 id="profile-name">Seishun Projects</h1>
+          <p class="profile-copy">
+            Event Organizer masa muda sebelum jadi tua💀<br
+              class="d-none d-sm-inline"
+            />
+            Ingin kerjasama? langsung DM Kami lewat Instagram 😋👌
+          </p>
+        </section>
+
+        <section class="links-list" aria-label="Tautan Seishun Projects">
+          <a
+            class="link-card"
+            href="https://forms.gle/9H63fYFR7fKY3gaz8"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="link-icon"><i class="bi bi-shop"></i></span>
+            <span class="link-label"
+              ><strong>Daftar Booth / Stand</strong
+              ><small>Amankan tempatmu untuk ikut berpartisipasi</small></span
+            >
+            <i class="bi bi-arrow-up-right link-arrow"></i>
+          </a>
+          <a
+            class="link-card"
+            href="https://forms.gle/eQdz2hwAPCE2ALp37"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="link-icon"><i class="bi bi-person-walking"></i></span>
+            <span class="link-label"
+              ><strong>Mini Coswalk</strong
+              ><small>Daftar sekarang untuk ikut berpartisipasi</small></span
+            >
+            <i class="bi bi-arrow-up-right link-arrow"></i>
+          </a>
+          <a
+            class="link-card"
+            href="https://forms.gle/moV7Y47Ugv39TSTw5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="link-icon"
+              ><i class="bi bi-music-note-beamed"></i
+            ></span>
+            <span class="link-label"
+              ><strong>Jsong Party</strong
+              ><small>Daftar sekarang untuk ikut berpartisipasi</small></span
+            >
+            <i class="bi bi-arrow-up-right link-arrow"></i>
+          </a>
+          <a
+            class="link-card"
+            href="https://www.instagram.com/seishun.projects/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="link-icon"><i class="bi bi-instagram"></i></span>
+            <span class="link-label"
+              ><strong>Instagram Seishun Projects</strong
+              ><small>Ikuti update terbaru kami</small></span
+            >
+            <i class="bi bi-arrow-up-right link-arrow"></i>
+          </a>
+          <div class="payment-card">
+            <div class="payment-heading">
+              <span class="payment-icon"
+                ><i class="bi bi-qr-code-scan"></i
+              ></span>
+              <div>
+                <strong>Pembayaran</strong>
+                <small>Seluruh pembayaran silahkan scan QRIS, simpan bukti pembayaran untuk di upload melalui google form</small>
+              </div>
+            </div>
+            <div class="qris-frame">
+              <img
+                class="qris-image"
+                src="iconqris.jpeg"
+                alt="QRIS pembayaran Anjimeh Store / Soelthan"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="about-panel" id="about" aria-label="Tentang Seishun">
+          <div class="about-kicker">A LITTLE NOTE</div>
+          <p>
+            Seishun berarti masa muda dalam bahasa Jepang: rasa ingin tahu yang
+            tak habis-habis, keberanian untuk mencoba, dan kegembiraan saat
+            membuat sesuatu bersama.
+          </p>
+        </section>
+
+        <footer class="footer-note">
+          <span>Made with dhobae</span>
+          <span class="footer-line"></span>
+          <span>© 2026</span>
+        </footer>
+      </div>
+      <div
+        class="toast-message"
+        id="toastMessage"
+        role="status"
+        aria-live="polite"
+      >
+        <i class="bi bi-check2-circle"></i> Link berhasil disalin
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
