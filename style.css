@@ -40,6 +40,7 @@ body {
 .content-wrap {
   max-width: 680px;
   padding: 28px 24px 40px;
+  width: 100%;
 }
 .ambient {
   border: 1px solid rgba(146, 158, 217, 0.14);
@@ -71,18 +72,23 @@ body {
 .topbar {
   align-items: center;
   display: flex;
+  gap: 16px;
   justify-content: space-between;
 }
 .brand-mark {
   align-items: center;
   color: var(--ink);
   display: inline-flex;
+  min-width: 0;
   font-family: "Space Grotesk", sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   gap: 9px;
   letter-spacing: 0.12em;
   text-decoration: none;
+}
+.brand-mark > span:last-child {
+  overflow-wrap: anywhere;
 }
 .brand-dot {
   background: var(--primary);
@@ -105,6 +111,7 @@ body {
   display: flex;
   height: 40px;
   justify-content: center;
+  flex: 0 0 40px;
   transition: 0.25s ease;
   width: 40px;
 }
@@ -243,17 +250,18 @@ h1 {
 .link-label strong {
   font-size: 0.95rem;
   font-weight: 600;
+  overflow-wrap: anywhere;
 }
 .link-label small {
   color: var(--muted);
   font-size: 0.75rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 .link-arrow {
   color: var(--secondary);
   font-size: 1rem;
+  flex: 0 0 auto;
 }
 .payment-card {
   animation: rise-in 0.65s ease both;
@@ -315,6 +323,28 @@ h1 {
   object-fit: cover;
   width: 100%;
 }
+.download-qris {
+  align-items: center;
+  background: rgba(100, 82, 253, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9px;
+  color: white;
+  display: inline-flex;
+  font-size: 0.76rem;
+  font-weight: 600;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 10px 14px;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+.download-qris:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
 .about-panel {
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   margin-top: 43px;
@@ -366,7 +396,8 @@ h1 {
   position: fixed;
   transform: translate(-50%, 20px);
   transition: 0.3s ease;
-  white-space: nowrap;
+  max-width: calc(100vw - 32px);
+  text-align: center;
 }
 .toast-message.show {
   opacity: 1;
@@ -386,7 +417,7 @@ h1 {
     transform: translateY(0);
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 575.98px) {
   .content-wrap {
     padding-left: 18px;
     padding-right: 18px;
@@ -395,9 +426,29 @@ h1 {
     padding-top: 40px;
   }
   .link-card {
-    padding-right: 14px;
+    gap: 10px;
+    min-height: 70px;
+    padding: 10px 12px 10px 10px;
+  }
+  .link-icon {
+    flex-basis: 42px;
+    height: 42px;
+  }
+  .link-label strong {
+    font-size: 0.88rem;
+  }
+  .link-label small {
+    font-size: 0.7rem;
   }
   .qris-frame {
-    max-width: 270px;
+    max-width: min(270px, 100%);
+  }
+  .footer-note {
+    flex-wrap: wrap;
+    gap: 8px;
+    line-height: 1.5;
+  }
+  .footer-line {
+    margin: 0 4px;
   }
 }
